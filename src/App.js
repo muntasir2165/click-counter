@@ -32,7 +32,11 @@ class App extends Component {
         <h1 data-test="counter-display">
           The counter is currently {this.state.counter}
         </h1>
-        {this.state.showErrorMessage && <div data-test="error-message" style={{color: "red", fontSize: 32}}>The counter cannot go below 0</div>}
+        {this.state.showErrorMessage && (
+          <div data-test="error-message" className="error">
+            The counter cannot go below 0
+          </div>
+        )}
         <button data-test="increment-button" onClick={() => this.increment()}>
           Increment counter
         </button>

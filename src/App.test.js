@@ -73,7 +73,7 @@ test("renders decrement button", () => {
   expect(button.length).toBe(1);
 });
 
-test("clicking decrement button decrements counter display", () => {
+test("clicking decrement button decrements counter display when counter is greater than 0", () => {
   const counter = 7;
   const wrapper = setup(null, { counter });
 
